@@ -26,6 +26,14 @@
       .card1 {
         background-color: #fd7e14;
       }
+
+      #gramsOutput,
+      #kgOutput,
+      #ozOutput {
+        font-size: 2rem;
+        font-weight: bold;
+        color: black;
+      }
     </style>
 
     <title>Converter</title>
@@ -48,19 +56,19 @@
           <div id="output">
             <div class="card card-primary mb-2">
               <div class="card-block">
-                <h4>Grams:</h4>
+                <h4>g:</h4>
                 <div id="gramsOutput"></div>
               </div>
             </div>
             <div class="card1 card-primary mb-8">
               <div class="card-block">
-                <h4>Kilograms:</h4>
+                <h4>Kg:</h4>
                 <div id="kgOutput"></div>
               </div>
             </div>
             <div class="card2 card-primary mb-7">
               <div class="card-block">
-                <h4>Ounces:</h4>
+                <h4>Oz:</h4>
                 <div id="ozOutput"></div>
               </div>
             </div>
@@ -75,7 +83,7 @@
         document.getElementById('output').style.visibility = 'visible';
         let lbs = e.target.value;
         document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
-        document.getElementById('kgOutputt').innerHTML = lbs/2.2046;
+        document.getElementById('kgOutput').innerHTML = lbs/2.2046;
         document.getElementById('ozOutput').innerHTML = lbs*16;
       });
 
